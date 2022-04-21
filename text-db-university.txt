@@ -7,7 +7,7 @@
 
 
 3. Selezionare tutti gli studenti che hanno più di 30 anni
-3. SELECT * FROM `students` WHERE year(`date_of_birth`) < 1992 (3338)
+3. SELECT COUNT(*) FROM `students` WHERE date_of_birth < CURRENT_DATE()-INTERVAL 30 YEAR
 
 
 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di
@@ -29,4 +29,4 @@ laurea (286)
 
 
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
-8. SELECT COUNT(*) FROM `teachers` WHERE `phone` IS NOT NULL
+8. SELECT COUNT(*) FROM `teachers` WHERE `phone` IS NULL
